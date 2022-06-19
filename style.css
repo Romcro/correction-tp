@@ -1,0 +1,401 @@
+/* typographie titre et lien*/
+@font-face {
+    font-family: 'abelregular';
+    src: url('abel_regular_macroman/adabel-regular-webfont.eot');
+    src: url('abel_regular_macroman/abel-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('abel_regular_macroman/abel-regular-webfont.woff2') format('woff2'),
+        url('abel_regular_macroman/abel-regular-webfont.woff') format('woff'),
+        url('abel_regular_macroman/abel-regular-webfont.ttf') format('truetype'),
+        url('abel_regular_macroman/abel-regular-webfont.svg#abelregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* typographie corps */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
+
+
+* {
+
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-size: 20px;
+    text-align: justify;
+}
+
+/* Typographie */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+
+    font-family: 'abelregular';
+    text-transform: uppercase;
+
+}
+
+h1 {
+
+    font-size: 4em;
+    text-align: center;
+    color: #fff;
+}
+
+h2 {
+
+    text-align: center;
+    font-size: 2em;
+    margin: 2em;
+}
+
+
+
+a {
+
+    text-decoration: none;
+    color: blue;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+}
+
+/* selecteur generique */
+
+
+nav {
+
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.2px);
+    -webkit-backdrop-filter: blur(7.2px);
+
+}
+
+
+
+nav ul li {
+
+    display: inline;
+}
+
+nav ul li a {
+
+    margin: 2em;
+    ;
+}
+
+
+header {
+
+    height: 80vh;
+    background: url(images/background.jpg) center fixed no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+
+    width: 90vw;
+    margin: 0 auto;
+}
+
+footer {
+
+
+        height: 80vh;
+        background: url(images/background.jpg) center fixed no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+
+
+}
+
+/* CLASS */
+
+
+
+.images {
+
+    width: 25vw;
+    height: 25vw;
+    margin: 0 auto;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    border-radius: 2em;
+
+}
+
+.bouton {
+
+    background-color: #fff;
+    margin: 2em auto;
+    display: block;
+    width: 10vw;
+    text-align: center;
+    padding: 1em;
+    border: 1px solid blue;
+}
+
+.container-projets {
+
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.list-rs {
+
+    list-style: none;
+    width: 30vw;
+    display: flex;
+    justify-content: space-between;
+    margin: 2em;
+
+}
+
+.fa-brands  {
+
+    color: #fff;
+    font-size: 4em;
+
+}
+
+
+/* page PORTFOLIO */
+
+/* GRID */
+
+.parent {
+    width: 90vw;
+    padding: 2em 0;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 2vw;
+    grid-row-gap: 2vw;
+
+
+}
+
+.div1 {
+    grid-area: 1 / 1 / 3 / 3;
+}
+
+.div2 {
+    grid-area: 1 / 3 / 3 / 5;
+}
+
+.div3 {
+    grid-area: 1 / 5 / 3 / 7;
+}
+
+.div4 {
+    grid-area: 3 / 1 / 5 / 3;
+}
+
+.div5 {
+    grid-area: 3 / 3 / 5 / 5;
+}
+
+.div6 {
+    grid-area: 3 / 5 / 5 / 7;
+}
+
+.div7 {
+    grid-area: 5 / 1 / 7 / 3;
+}
+
+.div8 {
+    grid-area: 5 / 3 / 7 / 5;
+}
+
+.div9 {
+    grid-area: 5 / 5 / 7 / 7;
+}
+
+/* MEDIAQUERIES */
+
+@media (max-width: 1024px) {
+
+    body {
+
+        font-size: 16px;
+
+    }
+
+    nav ul li a {
+
+        margin: 1em;
+        ;
+    }
+
+
+    .container-projets {
+
+        flex-direction: column;
+
+
+    }
+
+    .images {
+
+        width: 40vw;
+        height: 40vw;
+        margin: 2em auto;
+
+    }
+
+    .parent {
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+
+    }
+
+    .div1 {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .div2 {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .div3 {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .div4 {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .div5 {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    .div6 {
+        grid-area: 3 / 2 / 4 / 3;
+    }
+
+    .div7 {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+
+    .div8 {
+        grid-area: 4 / 2 / 5 / 3;
+    }
+
+    .div9 {
+        grid-area: 5 / 1 / 6 / 2;
+    }
+
+    .bouton {
+
+
+        width: 30vw;
+
+    }
+
+    .list-rs {
+
+
+        width: 60vw;
+
+    
+    }
+
+
+
+}
+
+@media (max-width: 500px) {
+
+    .images {
+
+        width: 90vw;
+        height: 40vw;
+
+    }
+
+
+    .parent {
+
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 1fr);
+
+    }
+
+    .div1 {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .div2 {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .div3 {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    .div4 {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+
+    .div5 {
+        grid-area: 5 / 1 / 6 / 2;
+    }
+
+    .div6 {
+        grid-area: 6 / 1 / 7 / 2;
+    }
+
+    .div7 {
+        grid-area: 7 / 1 / 8 / 2;
+    }
+
+    .div8 {
+        grid-area: 8 / 1 / 9 / 2;
+    }
+
+    .div9 {
+        grid-area: 9 / 1 / 10 / 2;
+    }
+
+    .list-rs {
+
+
+        width: 90vw;
+
+    
+    }
+
+
+}
